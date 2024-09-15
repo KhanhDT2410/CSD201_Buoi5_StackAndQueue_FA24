@@ -27,5 +27,15 @@ public class MyStack {
         top = newNode;
         length++;
     }
+    public int pop() {
+        if(isEmpty()) {
+            return -1;
+        }
+
+        int poppedElement = top.data;
+        top = top.next;
+        length--;
+        return poppedElement;
+    }
     // pop(): remove top element and return data of removed element
 }
